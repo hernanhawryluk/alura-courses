@@ -99,6 +99,22 @@ footer {
   margin: 20px;
 }
 
+@media screen and (max-width: 480px) {
+  .productos {
+    width: 370px;
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productos li {
+    display: block;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
 /* -------------- Contacto ---------------- */
 
 main {
@@ -164,6 +180,27 @@ td,
 th {
   border: 1px solid #000000;
   padding: 8px 15px;
+}
+
+@media screen and (max-width: 480px) {
+  .main-contacto {
+    width: 380px;
+  }
+
+  .input-padron,
+  form textarea {
+    width: 90%;
+  }
+
+  .enviar {
+    margin-left: 1rem;
+    width: 90%;
+  }
+
+  table {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
 }
 
 /* --------------- index.html ------------------ */
