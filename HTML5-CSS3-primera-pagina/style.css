@@ -105,7 +105,7 @@ form {
 }
 
 form label,
-form p {
+form legend {
   display: block;
   font-size: 20px;
   margin: 0 0 10px;
@@ -121,4 +121,38 @@ form textarea {
 
 .checkbox {
   margin: 20px 0;
+}
+
+.enviar {
+  width: 40%;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #f1ab1f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.enviar:hover {
+  background: #ffac2f;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+table {
+  margin: 40px 40px;
+}
+
+thead {
+  background: #555555;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid #000000;
+  padding: 8px 15px;
 }
