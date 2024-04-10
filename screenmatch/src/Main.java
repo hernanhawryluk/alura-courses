@@ -3,9 +3,9 @@ import com.aluracursos.screenmatch.modelos.Movie;
 public class Main {
     public static void main(String[] args) {
         Movie myMovie = new Movie();
-        myMovie.name = "Encanto";
-        myMovie.launchDate = 2021;
-        myMovie.durationInMinutes = 120;
+        myMovie.setName("Encanto");
+        myMovie.setLaunchDate(2021);
+        myMovie.setDurationInMinutes(120);
 
         myMovie.displayTechnicalSpecifications();
         myMovie.evaluate(10);
