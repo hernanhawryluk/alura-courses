@@ -43,7 +43,7 @@ public class Title {
     public void displayTechnicalSpecifications() {
         System.out.println("The name of the movie is: " + name);
         System.out.println("It was launch on: " + launchDate);
-        System.out.println("The duration in minutes is: " + durationInMinutes);
+        System.out.println("The duration in minutes is: " + getDurationInMinutes());
     }
 
     public void evaluate(double note) {

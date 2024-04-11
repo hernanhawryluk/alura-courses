@@ -1,9 +1,14 @@
 package com.aluracursos.screenmatch.modelos;
 
-public class Series extends Title {
-    int seasons;
-    int episodesPerSeason;
-    int minutesPerEpisode;
+public class Serie extends Title {
+    private int seasons;
+    private int episodesPerSeason;
+    private int minutesPerEpisode;
+
+    @Override
+    public int getDurationInMinutes() {
+        return seasons * episodesPerSeason * minutesPerEpisode;
+    }
 
     public int getSeasons() {
         return seasons;

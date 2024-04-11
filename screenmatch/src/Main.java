@@ -1,4 +1,7 @@
 import com.aluracursos.screenmatch.modelos.Movie;
+import com.aluracursos.screenmatch.modelos.Serie;
+
+import java.util.function.DoubleToIntFunction;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,5 +17,15 @@ public class Main {
 
         System.out.println("The total of the evaluations is: " + myMovie.getTotalOfEvaluations());
         System.out.println("The rating of the movie is: " + myMovie.calcMedia());
+
+        Serie houseDragon = new Serie();
+        houseDragon.setName("La casa del dragón");
+        houseDragon.setLaunchDate(2022);
+        houseDragon.setSeasons(1);
+        houseDragon.setMinutesPerEpisode(50);
+        houseDragon.setEpisodesPerSeason(10);
+
+        houseDragon.displayTechnicalSpecifications();
+
     }
 }
