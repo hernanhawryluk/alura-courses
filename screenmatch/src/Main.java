@@ -4,6 +4,7 @@ import com.aluracursos.screenmatch.modelos.Episode;
 import com.aluracursos.screenmatch.modelos.Movie;
 import com.aluracursos.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
 import java.util.function.DoubleToIntFunction;
 
 public class Main {
@@ -50,7 +51,20 @@ public class Main {
         System.out.println(episode.getName());
         recommendationFilter.filter(episode);
 
+        var movieOfBruno = new Movie();
+        movieOfBruno.setName("El señor de los anillos");
+        movieOfBruno.setDurationInMinutes(180);
+        movieOfBruno.setLaunchDate(2001);
 
+        ArrayList<Movie> moviesList = new ArrayList<>();
+        moviesList.add(myMovie);
+        moviesList.add(otherMovie);
+        moviesList.add(movieOfBruno);
+
+        System.out.println("Size of the List: " + moviesList.size());
+        System.out.println("The first movie is: " + moviesList.get(0).getName());
+
+        System.out.println(moviesList);
 
     }
 }
