@@ -1,4 +1,6 @@
+import com.aluracursos.screenmatch.calculations.RecommendationFilter;
 import com.aluracursos.screenmatch.calculations.TimeCalculator;
+import com.aluracursos.screenmatch.modelos.Episode;
 import com.aluracursos.screenmatch.modelos.Movie;
 import com.aluracursos.screenmatch.modelos.Serie;
 
@@ -36,7 +38,17 @@ public class Main {
         calculator.add(houseDragon);
         System.out.println("The total time for your favourite titles is: " + calculator.getTotalTime() + " minutes.");;
 
+        RecommendationFilter recommendationFilter = new RecommendationFilter();
+        System.out.println(myMovie.getName());
+        recommendationFilter.filter(myMovie);
 
+        Episode episode = new Episode();
+        episode.setNumber(1);
+        episode.setName("La casa Targaryen");
+        episode.setSerie(houseDragon);
+        episode.setTotalVisualizations(50);
+        System.out.println(episode.getName());
+        recommendationFilter.filter(episode);
 
 
 

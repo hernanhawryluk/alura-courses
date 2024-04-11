@@ -31,6 +31,14 @@ public class Episode implements Classification {
         this.serie = serie;
     }
 
+    public int getTotalVisualizations() {
+        return totalVisualizations;
+    }
+
+    public void setTotalVisualizations(int totalVisualizations) {
+        this.totalVisualizations = totalVisualizations;
+    }
+
     @Override
     public int getClassification() {
         if (totalVisualizations > 100) {

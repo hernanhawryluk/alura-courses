@@ -5,7 +5,7 @@ public class RecommendationFilter {
         if (classification.getClassification() >= 4) {
             System.out.println("It's a recommended movie");
         } else if (classification.getClassification() >= 2) {
-            System.out.println("Popular movie at the moment");
+            System.out.println("Popular at the moment");
         } else {
             System.out.println("Add it to your list to watch it later");
         }
