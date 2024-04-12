@@ -16,4 +16,9 @@ public class Movie extends Title implements Classification {
     public int getClassification() {
         return (int) calcMedia() / 2;
     }
+
+    @Override
+    public String toString() {
+        return "Movie: " + this.getName() + " (" + getLaunchDate() + ")";
+    }
 }

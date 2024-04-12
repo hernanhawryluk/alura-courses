@@ -65,6 +65,6 @@ public class Main {
         System.out.println("The first movie is: " + moviesList.get(0).getName());
 
         System.out.println(moviesList);
-
+        System.out.println("toString() of the Movie: " + moviesList.get(0).toString());
     }
 }
