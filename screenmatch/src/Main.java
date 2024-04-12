@@ -9,8 +9,7 @@ import java.util.function.DoubleToIntFunction;
 
 public class Main {
     public static void main(String[] args) {
-        Movie myMovie = new Movie();
-        myMovie.setName("Encanto");
+        Movie myMovie = new Movie("Encanto");
         myMovie.setLaunchDate(2021);
         myMovie.setDurationInMinutes(120);
         myMovie.displayTechnicalSpecifications();
@@ -28,8 +27,7 @@ public class Main {
         houseDragon.setEpisodesPerSeason(10);
         houseDragon.displayTechnicalSpecifications();
 
-        Movie otherMovie = new Movie();
-        otherMovie.setName("Matrix");
+        Movie otherMovie = new Movie("Matrix");
         otherMovie.setLaunchDate(1998);
         otherMovie.setDurationInMinutes(180);
 
@@ -51,8 +49,7 @@ public class Main {
         System.out.println(episode.getName());
         recommendationFilter.filter(episode);
 
-        var movieOfBruno = new Movie();
-        movieOfBruno.setName("El señor de los anillos");
+        var movieOfBruno = new Movie("El señor de los anillos");
         movieOfBruno.setDurationInMinutes(180);
         movieOfBruno.setLaunchDate(2001);
 
