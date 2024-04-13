@@ -7,6 +7,7 @@ import com.aluracursos.screenmatch.modelos.Title;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class MainWithLists {
     public static void main(String[] args) {
@@ -32,7 +33,7 @@ public class MainWithLists {
 
         }
 
-        ArrayList<String> listOfArtists = new ArrayList<>();
+        List<String> listOfArtists = new ArrayList<>();
         listOfArtists.add("Penelope Cruz");
         listOfArtists.add("Antonio Banderas");
         listOfArtists.add("Ricardo Darin");
@@ -44,7 +45,7 @@ public class MainWithLists {
         Collections.sort(list);
         System.out.println("Sorted List of Movies: " + list);
 
-        list.sort(Comparator.comparing(Title::getLaunchDate));
-        System.out.println("Sorted List of Movies by Launch Date: " + list);
+        list.sort(Comparator.comparing(Title::getReleaseDate));
+        System.out.println("Sorted List of Movies by release date: " + list);
     }
 }

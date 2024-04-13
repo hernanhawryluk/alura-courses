@@ -23,6 +23,6 @@ public class Movie extends Title implements Classification {
 
     @Override
     public String toString() {
-        return "Movie: " + this.getName() + " (" + getLaunchDate() + ")";
+        return "Movie: " + this.getName() + " (" + getReleaseDate() + ")";
     }
 }

@@ -2,7 +2,7 @@ package com.aluracursos.screenmatch.modelos;
 
 public class Title implements Comparable<Title> {
     private String name;
-    private int launchDate;
+    private int releaseDate;
     private int durationInMinutes;
     private boolean includedInThePlan;
     private double sumOfEvaluations;
@@ -10,15 +10,15 @@ public class Title implements Comparable<Title> {
 
     public Title(String name, int launchDate) {
         this.name = name;
-        this.launchDate = launchDate;
+        this.releaseDate = launchDate;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getLaunchDate() {
-        return launchDate;
+    public int getReleaseDate() {
+        return releaseDate;
     }
 
     public int getDurationInMinutes() {
@@ -33,8 +33,8 @@ public class Title implements Comparable<Title> {
         this.name = name;
     }
 
-    public void setLaunchDate(int launchDate) {
-        this.launchDate = launchDate;
+    public void setReleaseDate(int launchDate) {
+        this.releaseDate = launchDate;
     }
 
     public void setDurationInMinutes(int durationInMinutes) {
@@ -47,7 +47,7 @@ public class Title implements Comparable<Title> {
 
     public void displayTechnicalSpecifications() {
         System.out.println("The name of the movie is: " + name);
-        System.out.println("It was launch on: " + launchDate);
+        System.out.println("It was launch on: " + releaseDate);
         System.out.println("The duration in minutes is: " + getDurationInMinutes());
     }
 
