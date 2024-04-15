@@ -4,8 +4,8 @@ import com.aluracursos.screenmatch.calculations.Classification;
 public class Movie extends Title implements Classification {
     private String director;
 
-    public Movie(String name, int launchDate) {
-        super(name, launchDate);
+    public Movie(String name, int releaseDate, int durationInMinutes) {
+        super(name, releaseDate, durationInMinutes);
     }
 
     public String getDirector() {

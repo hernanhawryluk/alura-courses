@@ -12,9 +12,16 @@ public class Title implements Comparable<Title> {
     private double sumOfEvaluations;
     private int totalOfEvaluations;
 
-    public Title(String name, int releaseDate) {
+    public Title(TitleOmdb myTitleOmdb) {
+        this.name = myTitleOmdb.title();
+        this.releaseDate = Integer.valueOf(myTitleOmdb.year());
+        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0, 2));
+    }
+
+    public Title(String name, int releaseDate, int durationInMinutes) {
         this.name = name;
         this.releaseDate = releaseDate;
+        this.durationInMinutes = durationInMinutes;
     }
 
     public String getName() {
@@ -71,6 +78,6 @@ public class Title implements Comparable<Title> {
 
     @Override
     public String toString() {
-        return "name='" + name + "', ReleaseDate=" + releaseDate;
+        return "name='" + name + "', ReleaseDate=" + releaseDate + ", runtime=" + durationInMinutes;
     }
 }

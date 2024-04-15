@@ -11,13 +11,13 @@ import java.util.List;
 
 public class MainWithLists {
     public static void main(String[] args) {
-        Movie myMovie = new Movie("Encanto", 2021);
+        Movie myMovie = new Movie("Encanto", 2021, 50);
         myMovie.evaluate(9);
-        Movie otherMovie = new Movie("Matrix", 1998);
+        Movie otherMovie = new Movie("Matrix", 1998, 60);
         otherMovie.evaluate(6);
-        var movieOfBruno = new Movie("El señor de los anillos", 2001);
+        var movieOfBruno = new Movie("El señor de los anillos", 2001, 180);
         movieOfBruno.evaluate(10);
-        Serie houseDragon = new Serie("La casa del dragón", 2022);
+        Serie houseDragon = new Serie("La casa del dragón", 2022, 120);
 
         ArrayList<Title> list = new ArrayList<>();
         list.add(myMovie);
