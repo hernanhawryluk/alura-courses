@@ -1,5 +1,6 @@
 package com.aluracursos.screenmatch.modelos;
 
+import com.aluracursos.screenmatch.exceptions.ErrorInConversionOfRuntimeException;
 import com.google.gson.annotations.SerializedName;
 
 public class Title implements Comparable<Title> {
@@ -15,7 +16,10 @@ public class Title implements Comparable<Title> {
     public Title(TitleOmdb myTitleOmdb) {
         this.name = myTitleOmdb.title();
         this.releaseDate = Integer.valueOf(myTitleOmdb.year());
-        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0, 2));
+        if(myTitleOmdb.runtime().contains("N/A")) {
+            throw new ErrorInConversionOfRuntimeException("Was not able to convert the runtime because contains 'N/A'");
+        }
+        this.durationInMinutes = Integer.valueOf(myTitleOmdb.runtime().substring(0, 3).replace(" ", ""));
     }
 
     public Title(String name, int releaseDate, int durationInMinutes) {

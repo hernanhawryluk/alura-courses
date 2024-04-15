@@ -19,7 +19,7 @@ public class MainWithSearch {
         System.out.println("Write the movie you are looking for:");
         var search = prompt.nextLine();
 
-        String url = "http://www.omdbapi.com/?t=" + search + "&apikey=27222298";
+        String url = "http://www.omdbapi.com/?t=" + search.replace(" ", "+") + "&apikey=27222298";
 
         try {
             HttpClient client = HttpClient.newHttpClient();
