@@ -6,6 +6,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -39,6 +40,11 @@ public class MainWithSearch {
 
             Title myTitle = new Title(myTitleOmdb);
             System.out.println("Title already serialized:\n" + myTitle);
+
+            FileWriter file = new FileWriter("movies.txt");
+            file.write(myTitle.toString());
+            file.close();
+
         } catch (NumberFormatException e) {
             System.out.println("Something went wrong");
             System.out.println(e.getMessage());
